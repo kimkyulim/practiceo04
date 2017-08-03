@@ -1,6 +1,10 @@
 package prob03;
 
 public class DropShip extends Unit {
+	//unit클래스 잘만들면됨 
+	
+	
+	
 	// 현재 위치
 	private int x;
 	private int y; 

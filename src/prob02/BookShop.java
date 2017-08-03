@@ -36,4 +36,9 @@ public class BookShop {
 		displayBookInfo( books );
 	}
 
+	private static void displayBookInfo(Book[] books) {
+		System.out.println();
+		
+	}
+
 }
