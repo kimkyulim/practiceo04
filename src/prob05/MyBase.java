@@ -1,28 +1,28 @@
 package prob05;
 
 public class MyBase extends Base {
-	
-	//MyBase만 건들야서 과제하기 
-	//오버라이드만 하면됨.
-	
-	public void day() {
-		System.out.println("낮에는 열심히 일하자!");
-	}
-	
-	
 
 	@Override
 	public void service(String state) {
-			if("오후".equals(state)) {
-			afternoon();	
+		
+		if("오후".equals(state)) {
+			night1();
 			return;
-			}
-			super.service(state);
+		}
+		super.service(state);
+		
 	}
 
-
-
-	public void afternoon() {
-		System.out.println("오후도 낮과 마찬가지로 일해야 합니다. ");
+	@Override
+	public void day() {
+		System.out.println("낮에는 열심히 일하자!");
+		/*super.day();*/
 	}
+
+	public void night1(){
+		System.out.println("오후도 낮과 마찬가지로 일해야합니다.");
+	}
+	
+	
+
 }

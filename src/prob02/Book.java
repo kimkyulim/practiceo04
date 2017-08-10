@@ -1,60 +1,50 @@
 package prob02;
 
 public class Book {
+	private int bookNo;//번호
+	private String title;//제목
+	private String author;//작가
+	private int stateCode;//상태코드
 	
-	private int bookNo;
-	private String title;
-	private String author;
-	private int stateCode;
-	
-	public Book( int bookNo, String title, String author ) {
-		this.bookNo = bookNo;
-		this.title = title;
-		this.author = author;
+	public Book(int bookNo, String title, String author) {
+		this.bookNo=bookNo;
+		this.title=title;
+		this.author=author;
 		this.stateCode = 1;
 	}
 	
-	public int getBookNo() {
+	public int getBooNo() {
 		return bookNo;
 	}
-	
-	public void setBookNo(int bookNo) {
+	public void setBooNo(int booNo) {
 		this.bookNo = bookNo;
 	}
-	
 	public String getTitle() {
 		return title;
 	}
-	
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
 	public String getAuthor() {
 		return author;
 	}
-	
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	
 	public int getStateCode() {
 		return stateCode;
 	}
-	
 	public void setStateCode(int stateCode) {
 		this.stateCode = stateCode;
 	}
 	
 	public void rent() {
-		stateCode = 0;
-		System.out.println( title + "이(가) 대여 됐습니다." );
+		setStateCode(0);
+		System.out.println(title+"이 대여되었습니다.");
 	}
 	
 	public void print() {
-		System.out.println(
-			"책 제목:" + title +
-			", 작가:" + author +
-			", 대여 유무:" + ( stateCode == 1 ? "재고있음" : "대여중" ) );
+		System.out.println("책제목 :" + getTitle() + "작가 :" + getAuthor() + "대여 유무:" + (getStateCode() == 1 ? "재고 있음" : "대여중"));
 	}
+	
 }

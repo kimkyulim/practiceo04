@@ -1,5 +1,4 @@
 package prob02;
-
 import java.util.Scanner;
 
 public class BookShop {
@@ -26,9 +25,8 @@ public class BookShop {
 		
 		// (1) 입력된 번호에 맞는 책을 찾아 대여 되었음(상태코드=0)을 체크 합니다.
 		for( Book book : books ) {
-			if( num == book.getBookNo() ) {
+			if(num==book.getBooNo()) {
 				book.rent();
-				break;
 			}
 		}
 		
@@ -38,7 +36,7 @@ public class BookShop {
 	}
 	
 	private static void displayBookInfo( Book[] books ) {
-		for( Book book : books ) {
+		for (Book book : books) {
 			book.print();
 		}
 	}
